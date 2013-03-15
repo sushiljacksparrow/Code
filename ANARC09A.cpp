@@ -1,0 +1,70 @@
+/*Sushil Kumar Singh */
+#include <cassert>
+#include <cctype>
+#include <cfloat>
+#include <cmath>
+#include <cstdarg>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <climits>
+#include <algorithm>
+#include <bitset>
+#include <complex>
+#include <deque>
+#include <functional>
+#include <iostream>
+#include <iomanip>
+#include <iterator>
+#include <limits>
+#include <list>
+#include <map>
+#include <memory>
+#include <new>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <utility>
+#include <valarray>
+#include <vector>
+#include <ext/numeric>
+#include <ext/hash_map>
+#include <ext/hash_set>
+#include <ext/algorithm>
+
+using namespace std;
+using namespace __gnu_cxx;
+
+#define pb push_back
+#define vi vector<int>
+#define vii vector<vi>
+#define ii pair<int,int>
+#define vs vector<string>
+#define all(v) (v).begin(), (v).end()
+#define For(i,x) for(int i=0;i<x;i++)
+
+int main()
+{
+    //freopen("in.txt","r",stdin);
+    //freopen("out.txt","w",stdout);
+	char buff[4096];
+	int cs = 1;
+	while(scanf("%s", buff) == 1 && buff[0] != '-')
+	{
+		int x, y, i;
+		for(x=y=i=0; buff[i];i++)
+		{
+			x += buff[i]=='{' ? 1 : -1;
+			if(x<0)
+				x+=2, y++;
+		}
+		
+		printf("%d. %d\n", cs++, (x>>1) + y);
+	}
+	
+    system("pause");
+}
+
